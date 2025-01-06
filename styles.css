@@ -339,9 +339,4 @@ footer p {
   .education {
     grid-template-columns: 1fr;
   }
-
-  .experience-item,
-  .education-item {
-    text-align: center;
-  }
 }
