@@ -161,7 +161,7 @@ section p {
   padding-left: 2%;
 }
 
-.experience, .education {
+.experience, .education{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
@@ -174,10 +174,30 @@ section p {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.project-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px; 
+}
+
 .experience-item img, .education-item img {
   display: block;
   margin: 0 auto;
   max-width: 120px;
+}
+
+#trojan-horse-game-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#trojan-horse-game-images img {
+  max-width: 100%;
+  padding-bottom: 2%;
 }
 
 footer {
@@ -240,6 +260,8 @@ footer p {
   overflow: hidden;
   transition: transform 0.3s, background-color 0.3s;
   text-decoration: none;
+  height: 25px; 
+  line-height: 25px;
 }
 
 .resume-button:hover {

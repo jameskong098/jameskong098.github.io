@@ -13,8 +13,8 @@
       <ul>
         <li><a href="#about-me" onclick="handleMenuClick()">About Me</a></li>
         <li><a href="#experience" onclick="handleMenuClick()">Experience</a></li>
-        <li><a href="#education" onclick="handleMenuClick()">Education</a></li>
         <li><a href="#projects" onclick="handleMenuClick()">Projects</a></li>
+        <li><a href="#education" onclick="handleMenuClick()">Education</a></li>
         <li><a href="#contact" onclick="handleMenuClick()">Contact</a></li>
       </ul>
     </nav>
@@ -24,7 +24,7 @@
     <div class="overlay" onclick="toggleMenu()"></div>
     <header id="about-me">
       <h1>James D. Kong</h1>
-      <p>SWE Intern @ Zebra | CS & Business at Brandeis</p>
+      <p>Masters of Science Student in Computer Science at Brandeis University</p>
     </header>
     <div class="content">
       <main class="container">
@@ -42,11 +42,6 @@
                   As a Lead Mobile App Developer, I've led a talented team in crafting a popular React Native app, showcasing my ability to collaborate and deliver user-focused solutions. 
                   I bring a strong foundation in Java, Python, and JavaScript, along with a passion for exploring new technologies.
                 </p>
-              </div>
-              <div class="resume-download">
-                <a href="James_Kong_Resume.pdf" class="resume-button" download="James_Kong_Resume.pdf">
-                  Download Resume
-                </a>
               </div>
               <div style="flex-direction: row">
                 <a
@@ -67,6 +62,9 @@
 
                 <a href="mailto:jameskong098@gmail.com" class="social-button">
                   Email Me
+                </a>
+                <a href="James_Kong_Resume.pdf" class="resume-button" download="James_Kong_Resume.pdf">
+                  Download Resume
                 </a>
               </div>
             </div>
@@ -165,6 +163,89 @@
                 • Implemented effective record-keeping practices to monitor student progress and development, ensuring clear communication with parents and guardians about achievements and areas for improvement<br /><br />
               </p>
               <p>Skills: Teaching, Communication</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects">
+          <h2>Projects</h2>
+          <div class="project">
+            <div class="project-item">
+              <h3>Public Transportation Systems Efficiency Analysis</h3>
+              <a
+                  href="https://github.com/jameskong098/graduate-team-23-transportation-systems"
+                  target="_blank"
+                  class="social-button"
+                >
+                  <div class="github-logo"></div>
+              </a>
+              <p id="brandeis-duration">
+                November 2024 - December 2024 <span></span>
+              </p>
+              <p>
+                An interactive data visualization using D3.v4 and javascript that explores various countries spending patterns on railway systems compared to the usage of those systems. 
+                This includes various quality measures and spending breakdowns as well. The final webpage additionally contains a description, analysis, and walk 
+                through of the visualization and creation process. This visualization will run both on chrome and firefox.<br /><br />
+              </p>
+              <div id="trojan-horse-game-images">
+                <img src="project_assets/Public_Transport/final_vis.png" alt="Visualization Screenshot" />
+              </div>
+              <p>
+                Tools: Javascript, D3.js, HTML, CSS
+              </p>
+            </div>
+            <div class="project-item">
+              <h3>Trojan Horse Game</h3>
+              <a
+                  href="https://github.com/jameskong098/Fake-Virus-Game"
+                  target="_blank"
+                  class="social-button"
+                >
+                  <div class="github-logo"></div>
+              </a>
+              <p id="brandeis-duration">
+                April 2024 <span></span>
+              </p>
+              <p>
+                This project implements a trojan horse-style game where the game serves as the trojan horse, containing a hidden payload in the form of a computer scraping script. 
+                The script gathers information in the background such as IP Address, approximate location, list of directories and files leading to the root, 
+                list of all running proccesses, and general system info such as CPU type. The program can also optionally 
+                send the information to a designated email address.<br /><br />
+              </p>
+              <div id="trojan-horse-game-images">
+                <img src="project_assets/Trojan_Horse_Game/game_gif.gif" alt="Trojan Horse Game Gif Demonstration" />
+                <img src="project_assets/Trojan_Horse_Game/email_0.png" alt="Trojan Horse Game email 0"/>
+                <img src="project_assets/Trojan_Horse_Game/email_1.png" alt="Trojan Horse Game email 1"/>
+              </div>
+              <p>
+                Tools: Python, Pygame, Requests, Sys, Threading, OS, Subprocess
+              </p>
+            </div>
+            <div class="project-item">
+              <h3>Movie Portfolio Website</h3>
+              <a
+                  href="https://github.com/jameskong098/Movie-Portfolio-Website"
+                  target="_blank"
+                  class="social-button"
+                >
+                  <div class="github-logo"></div>
+              </a>
+              <p id="brandeis-duration">
+                June 2022 <span></span>
+              </p>
+              <p>
+                I designed a portfolio website for a friend to showcase his films, animations, and blog posts. 
+                The website includes an admin login system that allows him to edit post titles and descriptions, add new posts, and delete old ones. 
+                To manage the data effectively, I utilized a MongoDB database for storing post links and descriptions.<br /><br />
+              </p>
+              <div id="trojan-horse-game-images">
+                <img src="project_assets/Movie_Portfolio/front_page.gif" alt="Movie Portfolio Site Gif Demonstration" />
+                <img src="project_assets/Movie_Portfolio/sc_3.jpeg" alt="Movie Portfolio Site Gif Demonstration" />
+                <img src="project_assets/Movie_Portfolio/sc_5.png" alt="Movie Portfolio Site Gif Demonstration" />
+              </div>
+              <p>
+                Tools: HTML, CSS, Express.js, Javascript, MongoDB
+              </p>
             </div>
           </div>
         </section>
