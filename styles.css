@@ -17,11 +17,21 @@ body {
   padding: 20px;
 }
 
+#desktop-header {
+  display: block;
+  text-align: left;
+  margin-bottom: 20%;
+}
+
+#mobile-header {
+  display: none;
+  text-align: center;
+}
+
 header {
   background-color: #007acc;
   color: #fff;
-  padding: 20px;
-  text-align: center;
+  padding: 25px;
 }
 
 header h1 {
@@ -151,10 +161,15 @@ section p {
   flex-direction: column;
 }
 
+.profile-picture {
+  display: flex;
+  justify-content: center;
+}
+
 .profile-picture img {
   max-width: 200px;
   border-radius: 50%;
-  margin-bottom: 20px;
+  border: 3px solid #005f99;
 }
 
 .profile-description {
@@ -327,16 +342,15 @@ footer p {
 /* Sidebar styles */
 .sidebar {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   height: 100%;
-  width: 250px;
+  width: 318px;
   position: fixed;
   top: 0;
   left: 0; /* Visible by default on larger screens */
   background-color: #007acc;
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: 10px;
   transition: left 0.3s;
   z-index: 2; /* Ensure it overlays on top */
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -345,7 +359,6 @@ footer p {
 .sidebar ul {
   display: flex;
   flex-direction: column;
-  align-items: center;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -353,7 +366,7 @@ footer p {
 
 .sidebar ul li {
   display: inline-block;
-  margin-bottom: 80%;
+  margin-bottom: 25%;
 }
 
 .sidebar ul li a {
@@ -362,7 +375,6 @@ footer p {
   padding: 10px 20px;
   font-size: 24px;
   border-radius: 5px;
-  border-bottom: 1px solid white;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -396,7 +408,7 @@ footer p {
 
 /* Content styles */
 .content {
-  margin-left: 250px;
+  margin-left: 318px;
   padding: 20px;
   transition: margin-left 0.3s, filter 0.3s;
 }
@@ -415,6 +427,14 @@ footer p {
 
 /* Media Queries */
 @media (max-width: 768px) {
+  #desktop-header {
+    display: none;
+  }
+
+  #mobile-header {
+    display: block;
+  }
+
   header h1 {
     font-size: 28px;
   }
@@ -433,7 +453,14 @@ footer p {
   }
 
   .sidebar {
-    left: -250px; /* Initially hidden on mobile */
+    display: flex;
+    justify-content: center;
+    left: -100%; /* Initially hidden on mobile */
+  }
+
+  .sidebar ul li {
+    display: inline-block;
+    margin-bottom: 25%;
   }
 
   .content {

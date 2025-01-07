@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
-    <title>James D. Kong - Welcome</title>
+    <title>James D. Kong</title>
   </head>
 
   <body>
     <nav class="sidebar">
+      <header id="desktop-header">
+        <h1>James D. Kong</h1>
+        <p>M.S. Graduate Student at Brandeis University</p>
+      </header>
       <ul>
         <li><a href="#about-me" onclick="handleMenuClick()">About Me</a></li>
         <li><a href="#experience" onclick="handleMenuClick()">Experience</a></li>
@@ -22,9 +26,10 @@
       &#9776;
     </div>
     <div class="overlay" onclick="toggleMenu()"></div>
-    <header id="about-me">
-      <h1>James D. Kong</h1>
-      <p>Masters of Science Student in Computer Science at Brandeis University</p>
+    <div id="about-me"></div>
+    <header id="mobile-header">
+      <h1>James Deming Kong</h1>
+      <p>M.S. Graduate Student at Brandeis University</p>
     </header>
     <div class="content">
       <main class="container">
@@ -307,7 +312,7 @@
         const content = document.querySelector('.content');
         const hamburgerMenu = document.querySelector('.hamburger-menu');
         if (sidebar.style.left === '0px') {
-          sidebar.style.left = '-250px';
+          sidebar.style.left = '-100%';
           overlay.style.display = 'none';
           content.style.filter = 'none';
           hamburgerMenu.style.display = 'block'; // Show hamburger menu
@@ -330,7 +335,7 @@
           content.style.filter = 'none';
           hamburgerMenu.style.display = 'none'; // Hide hamburger menu on larger screens
         } else {
-          sidebar.style.left = '-250px';
+          sidebar.style.left = '-100%';
           overlay.style.display = 'none';
           content.style.filter = 'none';
           hamburgerMenu.style.display = 'block'; // Show hamburger menu on smaller screens
