@@ -9,192 +9,326 @@
   </head>
 
   <body>
-    <header>
+    <nav class="sidebar">
+      <ul>
+        <li><a href="#about-me" onclick="handleMenuClick()">About Me</a></li>
+        <li><a href="#experience" onclick="handleMenuClick()">Experience</a></li>
+        <li><a href="#projects" onclick="handleMenuClick()">Projects</a></li>
+        <li><a href="#education" onclick="handleMenuClick()">Education</a></li>
+        <li><a href="#contact" onclick="handleMenuClick()">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      &#9776;
+    </div>
+    <div class="overlay" onclick="toggleMenu()"></div>
+    <header id="about-me">
       <h1>James D. Kong</h1>
-      <p>SWE Intern @ Zebra | CS & Business at Brandeis</p>
+      <p>Masters of Science Student in Computer Science at Brandeis University</p>
     </header>
+    <div class="content">
+      <main class="container">
+        <section>
+          <h2>About Me</h2>
+          <div class="about-me">
+            <div class="about-me-content">
+              <div class="profile-picture">
+                <img src="assets/James_Kong.png" alt="Profile Picture" />
+              </div>
+              <div class="profile-description">
+                <p>
+                  I'm James Kong, a driven Computer Science student at Brandeis University with a knack for solving technical challenges. 
+                  I've gained hands-on experience as an IT Help Desk Technician and Software Engineer Intern, where I've excelled in troubleshooting and developing innovative solutions. 
+                  As a Lead Mobile App Developer, I've led a talented team in crafting a popular React Native app, showcasing my ability to collaborate and deliver user-focused solutions. 
+                  I bring a strong foundation in Java, Python, and JavaScript, along with a passion for exploring new technologies.
+                </p>
+              </div>
+              <div style="flex-direction: row">
+                <a
+                  href="https://github.com/jameskong098"
+                  target="_blank"
+                  class="social-button"
+                >
+                  <div class="github-logo"></div>
+                </a>
 
-    <main class="container">
-      <section>
-        <h2>About Me</h2>
-        <div class="about-me">
-          <div class="about-me-content">
-            <div class="profile-picture">
-              <img src="assets/James_Kong.png" alt="Profile Picture" />
+                <a
+                  href="https://www.linkedin.com/in/jamesdemingkong/"
+                  target="_blank"
+                  class="social-button"
+                >
+                  <div class="linkedin-logo"></div>
+                </a>
+
+                <a href="mailto:jameskong098@gmail.com" class="social-button">
+                  Email Me
+                </a>
+                <a href="James_Kong_Resume.pdf" class="resume-button" download="James_Kong_Resume.pdf">
+                  Download Resume
+                </a>
+              </div>
             </div>
-            <div class="profile-description">
+          </div>
+        </section>
+
+        <section id="experience">
+          <h2>Experience</h2>
+          <div class="experience">
+            <div class="experience-item">
+              <img src="assets/Brandeis.jpg" alt="Brandeis University Logo" />
+              <h3>Graduate Head Teaching Assistant - Intro to Problem Solving in Python</h3>
+              <p>Brandeis University | Waltham, Massachusetts, United States</p>
+              <p id="brandeis-duration">
+                Aug 2024 - Dec 2024 | 5 months <span></span>
+              </p>
               <p>
-                I'm James Kong, a driven Computer Science student at Brandeis University with a knack for solving technical challenges. 
-                I've gained hands-on experience as an IT Help Desk Technician and Software Engineer Intern, where I've excelled in troubleshooting and developing innovative solutions. 
-                As a Lead Mobile App Developer, I've led a talented team in crafting a popular React Native app, showcasing my ability to collaborate and deliver user-focused solutions. 
-                I bring a strong foundation in Java, Python, and JavaScript, along with a passion for exploring new technologies.
+                • Lead bi-weekly recitations for a class of 70 students, facilitating in-depth discussions and reinforcing Python programming concepts<br /><br />
+
+                • Conduct weekly office hours to provide personalized academic support and guidance<br /><br />
+
+                • Oversee the grading process and coordinate exams to ensure fairness and accuracy<br /><br />
+              </p>
+              <p>
+                Skills: Customer Service, Technical Support, Troubleshooting,
+                Critical Thinking, Communication
               </p>
             </div>
-            <div class="resume-download">
-              <a href="James_Kong_Resume.pdf" class="resume-button" download="James_Kong_Resume.pdf">
-                Download Resume
-              </a>
+            <div class="experience-item">
+              <img src="assets/Brandeis.jpg" alt="Brandeis University Logo" />
+              <h3>IT Technician Level II</h3>
+              <p>Brandeis University | Waltham, Massachusetts, United States</p>
+              <p id="brandeis-duration">
+                Nov 2022 - May 2024 | 1 year, 7 months <span></span>
+              </p>
+              <p>
+                • Delivered comprehensive technical support to clients, efficiently managing up to 350 tickets per week<br /><br />
+
+                • Promptly tracked and resolved tickets using Jira with a 85% ticket resolution rate under 48 hours<br /><br />
+
+                • Facilitated the re-imaging of staff and student devices, optimizing system performances<br /><br />
+              </p>
+              <p>
+                Skills: Customer Service, Technical Support, Troubleshooting,
+                Critical Thinking, Communication
+              </p>
             </div>
-            <div style="flex-direction: row">
-              <a
-                href="https://github.com/jameskong098"
-                target="_blank"
-                class="social-button"
-              >
-                <div class="github-logo"></div>
-              </a>
+            <div class="experience-item">
+              <img
+                src="assets/Zebra_Logo.jpg"
+                alt="Zebra Technologies Logo"
+                style="border: 1px solid black"
+              />
+              <h3>Software Engineer Intern</h3>
+              <p>Zebra Technologies | Dedham, Massachusetts, United States</p>
+              <p id="zebra-duration">May 2023 - Aug 2023 | 4 months<span></span></p>
+              <p>
+                • Developed a machine learning prototype interface for payroll anomaly detection using the Isolation Forest algorithm in Python, analyzing over 5.4k transactions from an IBM Db2 database streamlined by optimized SQL queries<br /><br />
 
-              <a
-                href="https://www.linkedin.com/in/jamesdemingkong/"
-                target="_blank"
-                class="social-button"
-              >
-                <div class="linkedin-logo"></div>
-              </a>
+                • Automated API documentation according to OpenAPI specifications, reducing documentation time by 60% through custom Gradle tasks and plugins<br /><br />
 
-              <a href="mailto:jameskong098@gmail.com" class="social-button">
-                Email Me
-              </a>
+                • Refactored Punch API and wrote extensive unit tests using JUnit and Mockito, achieving a test coverage of 95% across all Punch service and method classes<br /><br />
+              </p>
+              <p>
+                Skills: REST APIs, Relational Databases, Gradle, Groovy, React.js,
+                Mockito, Java, JavaScript
+              </p>
+            </div>
+            <div class="experience-item">
+              <img src="assets/Branda.jpg" alt="Branda Logo" />
+              <h3>Lead Mobile App Developer</h3>
+              <p>Branda | Waltham, Massachusetts, United States</p>
+              <p>April 2022 - July 2023 | 1 year, 4 months</p>
+              <p>
+                • Directed and mentored a team of 15 student developers on a React Native mobile app rated 4.5/5 stars and used by over 1.6k users daily<br /><br />
+
+                • Increased code efficiency by integrating new API routes and configurations into the backend, enhancing scalability and reducing response times by 30% during peak usage periods<br /><br />
+
+                • Improved user experience by implementing a chat bot, revamping the hours page to auto-refresh, adding dark maps to shuttle tracking tab, and fixing miscellaneous bugs<br /><br />
+              </p>
+              <p>
+                Skills: Cascading Style Sheets (CSS), MongoDB, React Native,
+                Object-Oriented Programming (OOP), JavaScript
+              </p>
+            </div>
+            <div class="experience-item">
+              <img src="assets/Juni.jpg" alt="Juni Learning Logo" />
+              <h3>Computer Science Instructor Level II</h3>
+              <p>Juni Learning | San Francisco, United States (Remote)</p>
+              <p>May 2021 - August 2022 | 1 year, 4 months</p>
+              <p>
+                • Provided engaging Python and Java lessons to a diverse group of students aged 8-16, fostering a passion for programming and technology among young learners<br /><br />
+
+                • Tailored teaching methods to suit individual skill levels and learning preferences, resulting in a 20% improvement in student comprehension and enthusiasm for coding<br /><br />
+
+                • Implemented effective record-keeping practices to monitor student progress and development, ensuring clear communication with parents and guardians about achievements and areas for improvement<br /><br />
+              </p>
+              <p>Skills: Teaching, Communication</p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section>
-        <h2>Experience</h2>
-        <div class="experience">
-          <div class="experience-item">
-            <img src="assets/Brandeis.jpg" alt="Brandeis University Logo" />
-            <h3>Graduate Head Teaching Assistant - Intro to Problem Solving in Python</h3>
-            <p>Brandeis University | Waltham, Massachusetts, United States</p>
-            <p id="brandeis-duration">
-              Aug 2024 - Dec 2024 | 5 months <span></span>
-            </p>
-            <p>
-              • Lead bi-weekly recitations for a class of 70 students, facilitating in-depth discussions and reinforcing Python programming concepts<br /><br />
-
-              • Conduct weekly office hours to provide personalized academic support and guidance<br /><br />
-
-              • Oversee the grading process and coordinate exams to ensure fairness and accuracy<br /><br />
-            </p>
-            <p>
-              Skills: Customer Service, Technical Support, Troubleshooting,
-              Critical Thinking, Communication
-            </p>
+        <section id="projects">
+          <h2>Projects</h2>
+          <div class="project">
+            <div class="project-item">
+              <h3>Public Transportation Systems Efficiency Analysis</h3>
+              <a
+                  href="https://github.com/jameskong098/graduate-team-23-transportation-systems"
+                  target="_blank"
+                  class="social-button"
+                >
+                  <div class="github-logo"></div>
+              </a>
+              <p id="brandeis-duration">
+                November 2024 - December 2024 <span></span>
+              </p>
+              <p>
+                An interactive data visualization using D3.v4 and javascript that explores various countries spending patterns on railway systems compared to the usage of those systems. 
+                This includes various quality measures and spending breakdowns as well. The final webpage additionally contains a description, analysis, and walk 
+                through of the visualization and creation process. This visualization will run both on chrome and firefox.<br /><br />
+              </p>
+              <div id="trojan-horse-game-images">
+                <img src="project_assets/Public_Transport/final_vis.png" alt="Visualization Screenshot" />
+              </div>
+              <p>
+                Tools: Javascript, D3.js, HTML, CSS
+              </p>
+            </div>
+            <div class="project-item">
+              <h3>Trojan Horse Game</h3>
+              <a
+                  href="https://github.com/jameskong098/Fake-Virus-Game"
+                  target="_blank"
+                  class="social-button"
+                >
+                  <div class="github-logo"></div>
+              </a>
+              <p id="brandeis-duration">
+                April 2024 <span></span>
+              </p>
+              <p>
+                This project implements a trojan horse-style game where the game serves as the trojan horse, containing a hidden payload in the form of a computer scraping script. 
+                The script gathers information in the background such as IP Address, approximate location, list of directories and files leading to the root, 
+                list of all running proccesses, and general system info such as CPU type. The program can also optionally 
+                send the information to a designated email address.<br /><br />
+              </p>
+              <div id="trojan-horse-game-images">
+                <img src="project_assets/Trojan_Horse_Game/game_gif.gif" alt="Trojan Horse Game Gif Demonstration" />
+                <img src="project_assets/Trojan_Horse_Game/email_0.png" alt="Trojan Horse Game email 0"/>
+                <img src="project_assets/Trojan_Horse_Game/email_1.png" alt="Trojan Horse Game email 1"/>
+              </div>
+              <p>
+                Tools: Python, Pygame, Requests, Sys, Threading, OS, Subprocess
+              </p>
+            </div>
+            <div class="project-item">
+              <h3>Movie Portfolio Website</h3>
+              <a
+                  href="https://github.com/jameskong098/Movie-Portfolio-Website"
+                  target="_blank"
+                  class="social-button"
+                >
+                  <div class="github-logo"></div>
+              </a>
+              <p id="brandeis-duration">
+                June 2022 <span></span>
+              </p>
+              <p>
+                I designed a portfolio website for a friend to showcase his films, animations, and blog posts. 
+                The website includes an admin login system that allows him to edit post titles and descriptions, add new posts, and delete old ones. 
+                To manage the data effectively, I utilized a MongoDB database for storing post links and descriptions.<br /><br />
+              </p>
+              <div id="trojan-horse-game-images">
+                <img src="project_assets/Movie_Portfolio/front_page.gif" alt="Movie Portfolio Site Gif Demonstration" />
+                <img src="project_assets/Movie_Portfolio/sc_3.jpeg" alt="Movie Portfolio Site Gif Demonstration" />
+                <img src="project_assets/Movie_Portfolio/sc_5.png" alt="Movie Portfolio Site Gif Demonstration" />
+              </div>
+              <p>
+                Tools: HTML, CSS, Express.js, Javascript, MongoDB
+              </p>
+            </div>
           </div>
-          <div class="experience-item">
-            <img src="assets/Brandeis.jpg" alt="Brandeis University Logo" />
-            <h3>IT Technician Level II</h3>
-            <p>Brandeis University | Waltham, Massachusetts, United States</p>
-            <p id="brandeis-duration">
-              Nov 2022 - May 2024 | 1 year, 7 months <span></span>
-            </p>
-            <p>
-              • Delivered comprehensive technical support to clients, efficiently managing up to 350 tickets per week<br /><br />
+        </section>
 
-              • Promptly tracked and resolved tickets using Jira with a 85% ticket resolution rate under 48 hours<br /><br />
-
-              • Facilitated the re-imaging of staff and student devices, optimizing system performances<br /><br />
-            </p>
-            <p>
-              Skills: Customer Service, Technical Support, Troubleshooting,
-              Critical Thinking, Communication
-            </p>
+        <section id="education">
+          <h2>Education</h2>
+          <div class="education">
+            <div class="education-item">
+              <img src="assets/Brandeis.jpg" alt="Brandeis University Logo" />
+              <h3>Brandeis University</h3>
+              <p>Master of Science - MS, Computer Science</p>
+              <p>August 2024 - May 2025</p>
+            </div>
+            <div class="education-item">
+              <img src="assets/Brandeis.jpg" alt="Brandeis University Logo" />
+              <h3>Brandeis University</h3>
+              <p>Bachelor of Science - BS, Computer Science</p>
+              <p>Minor in Business</p>
+              <p>August 2020 - May 2024</p>
+            </div>
+            <div class="education-item">
+              <img
+                src="assets/sharonHigh.png"
+                alt="Sharon High School Logo"
+                style="max-width: 350px"
+              />
+              <h3>Sharon High School</h3>
+              <p>High School Diploma</p>
+              <p>August 2016 - June 2020</p>
+              <p>
+                Activities and societies: Captain of XC and T&amp;F Teams,
+                Volunteer at Sharon Youth Running Program 2018, 5 AP Classes, 6
+                Honors Classes, Principal Clarinetist in Honors Band, Tri-M Music
+                Honor Society Executive Member (Band Chair), NEC MYWE Band
+                Clarinetist
+              </p>
+            </div>
           </div>
-          <div class="experience-item">
-            <img
-              src="assets/Zebra_Logo.jpg"
-              alt="Zebra Technologies Logo"
-              style="border: 1px solid black"
-            />
-            <h3>Software Engineer Intern</h3>
-            <p>Zebra Technologies | Dedham, Massachusetts, United States</p>
-            <p id="zebra-duration">May 2023 - Aug 2023 | 4 months<span></span></p>
-            <p>
-              • Developed a machine learning prototype interface for payroll anomaly detection using the Isolation Forest algorithm in Python, analyzing over 5.4k transactions from an IBM Db2 database streamlined by optimized SQL queries<br /><br />
-
-              • Automated API documentation according to OpenAPI specifications, reducing documentation time by 60% through custom Gradle tasks and plugins<br /><br />
-
-              • Refactored Punch API and wrote extensive unit tests using JUnit and Mockito, achieving a test coverage of 95% across all Punch service and method classes<br /><br />
-            </p>
-            <p>
-              Skills: REST APIs, Relational Databases, Gradle, Groovy, React.js,
-              Mockito, Java, JavaScript
-            </p>
-          </div>
-          <div class="experience-item">
-            <img src="assets/Branda.jpg" alt="Branda Logo" />
-            <h3>Lead Mobile App Developer</h3>
-            <p>Branda | Waltham, Massachusetts, United States</p>
-            <p>April 2022 - July 2023 | 1 year, 4 months</p>
-            <p>
-              • Directed and mentored a team of 15 student developers on a React Native mobile app rated 4.5/5 stars and used by over 1.6k users daily<br /><br />
-
-              • Increased code efficiency by integrating new API routes and configurations into the backend, enhancing scalability and reducing response times by 30% during peak usage periods<br /><br />
-
-              • Improved user experience by implementing a chat bot, revamping the hours page to auto-refresh, adding dark maps to shuttle tracking tab, and fixing miscellaneous bugs<br /><br />
-            </p>
-            <p>
-              Skills: Cascading Style Sheets (CSS), MongoDB, React Native,
-              Object-Oriented Programming (OOP), JavaScript
-            </p>
-          </div>
-          <div class="experience-item">
-            <img src="assets/Juni.jpg" alt="Juni Learning Logo" />
-            <h3>Computer Science Instructor Level II</h3>
-            <p>Juni Learning | San Francisco, United States (Remote)</p>
-            <p>May 2021 - August 2022 | 1 year, 4 months</p>
-            <p>
-              • Provided engaging Python and Java lessons to a diverse group of students aged 8-16, fostering a passion for programming and technology among young learners<br /><br />
-
-              • Tailored teaching methods to suit individual skill levels and learning preferences, resulting in a 20% improvement in student comprehension and enthusiasm for coding<br /><br />
-
-              • Implemented effective record-keeping practices to monitor student progress and development, ensuring clear communication with parents and guardians about achievements and areas for improvement<br /><br />
-            </p>
-            <p>Skills: Teaching, Communication</p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>Education</h2>
-        <div class="education">
-          <div class="education-item">
-            <img src="assets/Brandeis.jpg" alt="Brandeis University Logo" />
-            <h3>Brandeis University</h3>
-            <p>Master of Science - MS, Computer Science</p>
-            <p>August 2024 - May 2025</p>
-          </div>
-          <div class="education-item">
-            <img src="assets/Brandeis.jpg" alt="Brandeis University Logo" />
-            <h3>Brandeis University</h3>
-            <p>Bachelor of Science - BS, Computer Science</p>
-            <p>Minor in Business</p>
-            <p>August 2020 - May 2024</p>
-          </div>
-          <div class="education-item">
-            <img
-              src="assets/sharonHigh.png"
-              alt="Sharon High School Logo"
-              style="max-width: 350px"
-            />
-            <h3>Sharon High School</h3>
-            <p>High School Diploma</p>
-            <p>August 2016 - June 2020</p>
-            <p>
-              Activities and societies: Captain of XC and T&amp;F Teams,
-              Volunteer at Sharon Youth Running Program 2018, 5 AP Classes, 6
-              Honors Classes, Principal Clarinetist in Honors Band, Tri-M Music
-              Honor Society Executive Member (Band Chair), NEC MYWE Band
-              Clarinetist
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-
+        </section>
+      </main>
+    </div>
     <footer>
       <p>&copy; 2023 All Rights Reserved. James D. Kong</p>
     </footer>
+    <script>
+      function toggleMenu() {
+        const sidebar = document.querySelector('.sidebar');
+        const overlay = document.querySelector('.overlay');
+        const content = document.querySelector('.content');
+        if (sidebar.style.left === '0px') {
+          sidebar.style.left = '-250px';
+          overlay.style.display = 'none';
+          content.style.filter = 'none';
+        } else {
+          sidebar.style.left = '0';
+          overlay.style.display = 'block';
+          content.style.filter = 'blur(2px)';
+        }
+      }
+
+      function handleResize() {
+        const sidebar = document.querySelector('.sidebar');
+        const overlay = document.querySelector('.overlay');
+        const content = document.querySelector('.content');
+        if (window.innerWidth > 768) {
+          sidebar.style.left = '0';
+          overlay.style.display = 'none';
+          content.style.filter = 'none';
+        } else {
+          sidebar.style.left = '-250px';
+          overlay.style.display = 'none';
+          content.style.filter = 'none';
+        }
+      }
+
+      function handleMenuClick() {
+        if (window.innerWidth <= 768) {
+          toggleMenu();
+        }
+      }
+
+      window.addEventListener('resize', handleResize);
+      window.addEventListener('load', handleResize);
+    </script>
   </body>
 </html>
