@@ -381,15 +381,15 @@ footer p {
 /* Hamburger menu styles */
 .hamburger-menu {
   display: none;
-  font-size: 30px;
+  font-size: 25px;
   cursor: pointer;
   position: fixed;
   top: 15px;
-  left: 15px;
+  left: 5px;
   z-index: 3; /* Ensure it overlays on top */
   color: #007acc;
   background-color: #fff;
-  padding: 10px;
+  padding: 6px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }

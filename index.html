@@ -285,6 +285,16 @@
             </div>
           </div>
         </section>
+
+        <section id="contact">
+          <h2>Contact Me</h2>
+          <div class="contact-info">
+            <p><strong>Name:</strong> James Kong</p>
+            <p><strong>Email:</strong> <a href="mailto:jameskong098@gmail.com">jameskong098@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:781-428-5342">781-428-5342</a></p>
+          </div>
+        </section>
+        
       </main>
     </div>
     <footer>
@@ -295,38 +305,48 @@
         const sidebar = document.querySelector('.sidebar');
         const overlay = document.querySelector('.overlay');
         const content = document.querySelector('.content');
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
         if (sidebar.style.left === '0px') {
           sidebar.style.left = '-250px';
           overlay.style.display = 'none';
           content.style.filter = 'none';
+          hamburgerMenu.style.display = 'block'; // Show hamburger menu
         } else {
           sidebar.style.left = '0';
           overlay.style.display = 'block';
           content.style.filter = 'blur(2px)';
+          hamburgerMenu.style.display = 'none'; // Hide hamburger menu
         }
       }
-
+    
       function handleResize() {
         const sidebar = document.querySelector('.sidebar');
         const overlay = document.querySelector('.overlay');
         const content = document.querySelector('.content');
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
         if (window.innerWidth > 768) {
           sidebar.style.left = '0';
           overlay.style.display = 'none';
           content.style.filter = 'none';
+          hamburgerMenu.style.display = 'none'; // Hide hamburger menu on larger screens
         } else {
           sidebar.style.left = '-250px';
           overlay.style.display = 'none';
           content.style.filter = 'none';
+          hamburgerMenu.style.display = 'block'; // Show hamburger menu on smaller screens
         }
       }
-
-      function handleMenuClick() {
+    
+      function handleMenuClick(event) {
         if (window.innerWidth <= 768) {
           toggleMenu();
         }
+        document.querySelectorAll('.sidebar ul li a').forEach(item => {
+          item.classList.remove('selected');
+        });
+        event.target.classList.add('selected');
       }
-
+    
       window.addEventListener('resize', handleResize);
       window.addEventListener('load', handleResize);
     </script>
