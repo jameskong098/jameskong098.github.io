@@ -294,6 +294,9 @@
             <a href="mailto:jameskong098@gmail.com" class="social-button">Email Me</a>
             <p><strong>Phone:</strong> <a href="tel:781-428-5342">781-428-5342</a></p>
           </div>
+          <div id="success-message">
+            Your message has been sent!
+          </div>
           <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSf00E6H3380te4kP5_d0t4i1z1E7vFHPwo5Jb08_kc7ovgg9w/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
             <input type="text" name="entry.45925323" id="full-name" required placeholder="Your Name">
             <input type="email" name="entry.1829790175" id="email" required placeholder="Your Email">
@@ -301,7 +304,7 @@
             <input type="submit" value="Submit">
             <input type="reset" value="Reset">
           </form>
-          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="formSubmissionHandler()"></iframe>
         </section>
 
       </main>
