@@ -48,7 +48,7 @@
                   I bring a strong foundation in Java, Python, and JavaScript, along with a passion for exploring new technologies.
                 </p>
               </div>
-              <div style="flex-direction: row">
+              <div id="social-buttons">
                 <a
                   href="https://github.com/jameskong098"
                   target="_blank"
@@ -65,9 +65,6 @@
                   <div class="linkedin-logo"></div>
                 </a>
 
-                <a href="mailto:jameskong098@gmail.com" class="social-button">
-                  Email Me
-                </a>
                 <a href="James_Kong_Resume.pdf" class="resume-button" download="James_Kong_Resume.pdf">
                   Download Resume
                 </a>
@@ -294,66 +291,24 @@
         <section id="contact">
           <h2>Contact Me</h2>
           <div class="contact-info">
-            <p><strong>Name:</strong> James Kong</p>
-            <p><strong>Email:</strong> <a href="mailto:jameskong098@gmail.com">jameskong098@gmail.com</a></p>
+            <a href="mailto:jameskong098@gmail.com" class="social-button">Email Me</a>
             <p><strong>Phone:</strong> <a href="tel:781-428-5342">781-428-5342</a></p>
           </div>
+          <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSf00E6H3380te4kP5_d0t4i1z1E7vFHPwo5Jb08_kc7ovgg9w/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+            <input type="text" name="entry.45925323" id="full-name" required placeholder="Your Name">
+            <input type="email" name="entry.1829790175" id="email" required placeholder="Your Email">
+            <textarea name="entry.5649386" id="message" rows="4" cols="50" required placeholder="Enter your message"></textarea>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+          </form>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
         </section>
-        
+
       </main>
     </div>
     <footer>
       <p>&copy; 2023 All Rights Reserved. James D. Kong</p>
     </footer>
-    <script>
-      function toggleMenu() {
-        const sidebar = document.querySelector('.sidebar');
-        const overlay = document.querySelector('.overlay');
-        const content = document.querySelector('.content');
-        const hamburgerMenu = document.querySelector('.hamburger-menu');
-        if (sidebar.style.left === '0px') {
-          sidebar.style.left = '-100%';
-          overlay.style.display = 'none';
-          content.style.filter = 'none';
-          hamburgerMenu.style.display = 'block'; // Show hamburger menu
-        } else {
-          sidebar.style.left = '0';
-          overlay.style.display = 'block';
-          content.style.filter = 'blur(2px)';
-          hamburgerMenu.style.display = 'none'; // Hide hamburger menu
-        }
-      }
-    
-      function handleResize() {
-        const sidebar = document.querySelector('.sidebar');
-        const overlay = document.querySelector('.overlay');
-        const content = document.querySelector('.content');
-        const hamburgerMenu = document.querySelector('.hamburger-menu');
-        if (window.innerWidth > 768) {
-          sidebar.style.left = '0';
-          overlay.style.display = 'none';
-          content.style.filter = 'none';
-          hamburgerMenu.style.display = 'none'; // Hide hamburger menu on larger screens
-        } else {
-          sidebar.style.left = '-100%';
-          overlay.style.display = 'none';
-          content.style.filter = 'none';
-          hamburgerMenu.style.display = 'block'; // Show hamburger menu on smaller screens
-        }
-      }
-    
-      function handleMenuClick(event) {
-        if (window.innerWidth <= 768) {
-          toggleMenu();
-        }
-        document.querySelectorAll('.sidebar ul li a').forEach(item => {
-          item.classList.remove('selected');
-        });
-        event.target.classList.add('selected');
-      }
-    
-      window.addEventListener('resize', handleResize);
-      window.addEventListener('load', handleResize);
-    </script>
+    <script src="scripts.js"></script>
   </body>
 </html>
