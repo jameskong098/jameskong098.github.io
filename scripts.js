@@ -86,11 +86,13 @@ function formSubmissionHandler() {
   
 window.addEventListener('resize', handleResize);
 window.addEventListener('load', () => {
-handleResize();
-highlightCurrentSection();
+  handleResize();
+  if (window.innerWidth > 768) {
+    highlightCurrentSection();
+  }
 });
 window.addEventListener('scroll', () => {
-if (window.innerWidth > 768) {
+  if (window.innerWidth > 768) {
     highlightCurrentSection();
-}
+  }
 });
