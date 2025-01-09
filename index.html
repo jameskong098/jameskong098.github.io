@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&text=mail,school,contact_support, work_history, contact_page, folder_special, call, download, arrow_upward"/>
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="scripts/form.js"></script>
     <title>James D. Kong</title>
   </head>
 
@@ -16,11 +18,32 @@
         <p>M.S. Graduate Student at Brandeis University</p>
       </header>
       <ul>
-        <li><a href="#about-me" onclick="handleMenuClick()">About Me</a></li>
-        <li><a href="#experience" onclick="handleMenuClick()">Experience</a></li>
-        <li><a href="#projects" onclick="handleMenuClick()">Projects</a></li>
-        <li><a href="#education" onclick="handleMenuClick()">Education</a></li>
-        <li><a href="#contact" onclick="handleMenuClick()">Contact</a></li>
+        <li>
+          <a href="#about-me" onclick="handleMenuClick()">
+            <span class="material-symbols-outlined education-icon">contact_page</span>About Me
+          </a>
+        </li>
+        <li>
+          <a href="#experience" onclick="handleMenuClick()">
+            <span class="material-symbols-outlined education-icon">work_history</span>Experience
+          </a>
+        </li>
+        <li>
+          <a href="#projects" onclick="handleMenuClick()">
+            <span class="material-symbols-outlined education-icon">folder_special</span>Projects
+
+          </a>
+        </li>
+        <li>
+          <a href="#education" onclick="handleMenuClick()">
+            <span class="material-symbols-outlined education-icon">school</span>Education
+          </a>
+        </li>
+        <li>
+          <a href="#contact" onclick="handleMenuClick()">
+            <span class="material-symbols-outlined contact-icon">contact_support</span>Contact
+          </a>
+        </li>
       </ul>
     </nav>
     <div class="hamburger-menu" onclick="toggleMenu()">
@@ -48,6 +71,10 @@
                   As a Lead Mobile App Developer, I've led a talented team in crafting a popular React Native app, showcasing my ability to collaborate and deliver user-focused solutions. 
                   I bring a strong foundation in Java, Python, and JavaScript, along with a passion for exploring new technologies.
                 </p>
+                <p style="text-align: center;">
+                  <a href="mailto:jameskong098@gmail.com" style="color: black; text-decoration: none;">jameskong098@gmail.com</a> | 
+                  <a href="tel:+17814285342" style="color: black; text-decoration: none;">(781) 428-5342</a>
+                </p>
               </div>
               <div id="social-buttons">
                 <a
@@ -67,7 +94,7 @@
                 </a>
 
                 <a href="James_Kong_Resume.pdf" class="resume-button" download="James_Kong_Resume.pdf">
-                  Download Resume
+                  <span class="material-symbols-outlined download-icon">download</span>Resume
                 </a>
               </div>
             </div>
@@ -215,6 +242,13 @@
                 >
                   <div class="github-logo"></div>
               </a>
+              <a
+                  href="https://cosi116a-brandeis-infovis-fall23.github.io/graduate-team-23-transportation-systems/"
+                  target="_blank"
+                  class="social-button"
+                >
+                Live Page
+              </a>
               <p class="date">
                 November 2024 - December 2024 <span></span>
               </p>
@@ -242,6 +276,13 @@
                   class="social-button"
                 >
                   <div class="github-logo"></div>
+              </a>
+              <a
+                  href="https://github.com/jameskong098/Fake-Virus-Game/releases"
+                  target="_blank"
+                  class="social-button"
+                >
+                Game Download Page
               </a>
               <p class="date">
                 April 2024 <span></span>
@@ -330,7 +371,7 @@
               <img
                 src="assets/sharonHigh.png"
                 alt="Sharon High School Logo"
-                style="max-width: 350px"
+                id="sharon-high"
               />
               <h3>Sharon High School</h3>
               <p>High School Diploma</p>
@@ -350,8 +391,12 @@
         <section id="contact">
           <h2>Contact Me</h2>
           <div class="contact-info">
-            <a href="mailto:jameskong098@gmail.com" class="social-button">Email Me</a>
-            <p><strong>Phone #:</strong> <a href="tel:781-428-5342">781-428-5342</a></p>
+            <a href="mailto:jameskong098@gmail.com" class="social-button">
+              <span class="material-symbols-outlined mail-icon">mail</span>
+            </a>
+            <a href="tel:781-428-5342" class="social-button">
+              <span class="material-symbols-outlined mail-icon">call</span>
+            </a>
           </div>
           <div id="success-message">
             Your message has been sent!
@@ -360,8 +405,10 @@
             <input type="text" name="entry.45925323" id="full-name" required placeholder="Your Name">
             <input type="email" name="entry.1829790175" id="email" required placeholder="Your Email">
             <textarea name="entry.5649386" id="message" rows="4" cols="50" required placeholder="Enter your message"></textarea>
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <input type="submit" value="Submit">
+              <input type="reset" value="Reset">
+            </div>
           </form>
           <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="formSubmissionHandler()"></iframe>
         </section>
@@ -375,13 +422,17 @@
           href="https://github.com/jameskong098/jameskong098.github.io"
           target="_blank"
           class="social-button"
-          style="background-color: gray;"
         >
           <div class="github-logo"></div>
         </a>
       </div>
       <p>&copy; 2025 All Rights Reserved. James D. Kong</p>
     </footer>
-    <script src="scripts.js"></script>
+    <button id="scroll-up-button" onclick="scrollToTop()">
+      <span class="material-symbols-outlined">arrow_upward</span>
+    </button>
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/responsiveResize.js"></script>
+    <script src="scripts/scrolling.js"></script>
   </body>
 </html>

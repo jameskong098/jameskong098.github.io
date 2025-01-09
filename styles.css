@@ -12,10 +12,9 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 750px;
   margin: 0 auto;
   padding: 20px;
-
 }
 
 #desktop-header {
@@ -116,12 +115,11 @@ section p {
 }
 
 .github-logo {
-  background-image: url("https://github.com/fluidicon.png");
+  background-image: url("assets/GitHub.png");
 }
 
 .linkedin-logo {
-  background-image: url("https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg");
-  background-color: white;
+  background-image: url("assets/Linkedin.png");
 }
 
 #social-buttons {
@@ -209,6 +207,11 @@ section p {
   max-width: 120px;
 }
 
+#sharon-high {
+  max-width: 100%;
+  height: auto;
+}
+
 #trojan-horse-game-images {
   display: flex;
   flex-direction: column;
@@ -227,6 +230,10 @@ section p {
 }
 
 footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #007acc;
   color: #fff;
   padding: 20px;
@@ -241,44 +248,12 @@ footer p {
 #footer-source-link {
   display: flex; 
   flex-direction: column;
-  align-items: center;;
+  align-items: center;
   justify-content: center;
 }
 
-/* Style for the "Email Me" button */
-.email-button {
-  display: inline-block;
-  margin: 10px;
-  padding: 10px 20px;
-  background-color: #007acc;
-  color: #fff;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s, background-color 0.3s;
-  text-decoration: none;
-}
-
-.email-button:hover {
-  transform: scale(1.1);
-  background-color: #005f99;
-}
-
-.email-button::before {
-  content: "";
-  position: absolute;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
-  opacity: 0;
-  transition: opacity 0.3s;
-  pointer-events: none;
-}
-
-.email-button:hover::before {
-  opacity: 1;
+#footer-source-link a {
+  background-color: rgba(255, 255, 255, 0.726);
 }
 
 .resume-button {
@@ -333,7 +308,6 @@ footer p {
   text-decoration: none;
   height: 25px; 
   line-height: 25px; 
-  margin-right: 2%;
 }
 
 .social-button:hover {
@@ -386,6 +360,14 @@ form textarea {
   box-sizing: border-box;
   font-size: 17px; 
   color: #333; 
+}
+
+form input[type="text"]::placeholder,
+form input[type="email"]::placeholder,
+form textarea::placeholder {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px; 
+  color: #999; 
 }
 
 form input[type="submit"] {
@@ -558,6 +540,29 @@ form textarea:focus {
   margin-bottom: 25%;
 }
 
+.sidebar ul li a .material-symbols-outlined {
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.education-icon {
+  font-size: 30px; 
+}
+
+.contact-icon {
+  font-size: 30px; 
+}
+
+.mail-icon {
+  font-size: 30px; 
+}
+
+.download-icon {
+  font-size: 25px; 
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
 .sidebar ul li a::after {
   content: '';
   display: block;
@@ -576,12 +581,6 @@ form textarea:focus {
 .sidebar ul li a.selected {
   color: #fff;
 }
-/*
-.sidebar ul li a .icon {
-  margin-right: 10px;
-  font-size: 20px;
-}
-  */
 
 .hamburger-menu {
   display: none;
@@ -596,6 +595,44 @@ form textarea:focus {
   padding: 6px;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  outline: 1px solid #007acc;
+}
+
+#scroll-up-button {
+  opacity: 0; /* Initially invisible for fade-in effect */
+  position: fixed;
+  bottom: 20px;
+  right: 5px;
+  background-color: #007acc;
+  color: #fff;
+  border: 1px solid #fff; 
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.5s, transform 0.5s; 
+  z-index: 1000; /* Ensure it overlays on top */
+  pointer-events: none; /* Disable pointer events when hidden */
+}
+
+#scroll-up-button.show {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto; 
+}
+
+#scroll-up-button.hide {
+  opacity: 0;
+  transform: scale(0.5);
+  pointer-events: none; 
+}
+
+#scroll-up-button:active {
+  transform: scale(1.2); 
+}
+
+#scroll-up-button:hover {
+  transform: scale(1.1); 
 }
 
 .content {
@@ -637,8 +674,14 @@ form textarea:focus {
     font-size: 18px;
   }
 
-  .projects .experience .education img {
-    width: 100%;
+  #social-buttons {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .experience, .education{
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 
   .sidebar {
@@ -660,7 +703,30 @@ form textarea:focus {
   }
 }
 
+/* Small Phone Menu Layout */
+@media (max-width: 400px) {
+  /* (Shorten Menu so user can see the screen) */
+  .sidebar {
+    width: 215px;
+  }
+  .experience, .education {
+    grid-template-columns: 1fr; /* Ensure tiles take full width */
+  }
+}
+
+/* Small Laptop Menu Layout */
+@media (max-height: 800px) {
+  .sidebar ul li a {
+    margin-bottom: 15%;
+  }
+}
+
+/* Phone Landscape Menu Layout */
 @media (max-height: 400px) {
+  .sidebar {
+    width: 215px;
+  }
+
   .sidebar ul li a {
     margin-bottom: 0%;
   }
