@@ -25,7 +25,7 @@ body {
   outline: 1px solid #001f3f;
   color: #001f3f;
 }
-.button, #scroll-up-button, .resume-button, .social-button, footer, form input[type="submit"] {
+header, .button, #scroll-up-button, .resume-button, .social-button, footer, form input[type="submit"] {
   background-color: #008080; 
   color: black;
 }
@@ -67,7 +67,6 @@ header, .button, .resume-button, .social-button, footer, .sidebar ul li a {
 }
 
 header {
-  background-color: #001f3f;
   color: white;
   padding: 25px;
 }
