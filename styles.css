@@ -607,20 +607,17 @@ form textarea::placeholder {
     font-size: 18px;
   }
 
-  .experience,
-  .education {
-    grid-template-columns: 1fr;
+  .projects .experience .education img {
+    width: 100%;
   }
 
   .sidebar {
     display: flex;
     justify-content: center;
-    left: -100%; /* Initially hidden on mobile */
   }
 
-  .sidebar ul li {
-    display: inline-block;
-    margin-bottom: 6%;
+  .sidebar ul li a {
+    margin-bottom: 20%;
   }
 
   .content {

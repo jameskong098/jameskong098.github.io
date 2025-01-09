@@ -85,12 +85,22 @@ function formSubmissionHandler() {
 }
   
 window.addEventListener('resize', handleResize);
+
 window.addEventListener('load', () => {
   handleResize();
   if (window.innerWidth > 768) {
     highlightCurrentSection();
   }
+
+  ScrollReveal().reveal('.about-me, .experience-item, .project-item, .education-item, .contact-info, form', {
+    origin: 'bottom',
+    distance: '50px',
+    duration: 1000,
+    easing: 'ease-in-out',
+    reset: false
+  });
 });
+
 window.addEventListener('scroll', () => {
   if (window.innerWidth > 768) {
     highlightCurrentSection();
