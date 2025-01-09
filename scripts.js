@@ -1,3 +1,5 @@
+const maxWidth = 1180
+
 function toggleMenu() {
     const sidebar = document.querySelector('.sidebar');
     const overlay = document.querySelector('.overlay');
@@ -21,7 +23,7 @@ function handleResize() {
     const overlay = document.querySelector('.overlay');
     const content = document.querySelector('.content');
     const hamburgerMenu = document.querySelector('.hamburger-menu');
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > maxWidth) {
       sidebar.style.left = '0';
       overlay.style.display = 'none';
       content.style.filter = 'none';
@@ -35,7 +37,7 @@ function handleResize() {
 }
   
 function handleMenuClick(event) {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= maxWidth) {
       toggleMenu();
     }
     document.querySelectorAll('.sidebar ul li a').forEach(item => {
@@ -88,7 +90,7 @@ window.addEventListener('resize', handleResize);
 
 window.addEventListener('load', () => {
   handleResize();
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > maxWidth) {
     highlightCurrentSection();
   }
 
@@ -102,7 +104,7 @@ window.addEventListener('load', () => {
 });
 
 window.addEventListener('scroll', () => {
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > maxWidth) {
     highlightCurrentSection();
   }
 });
