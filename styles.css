@@ -659,3 +659,9 @@ form textarea:focus {
     display: block;
   }
 }
+
+@media (max-height: 400px) {
+  .sidebar ul li a {
+    margin-bottom: 0%;
+  }
+}
