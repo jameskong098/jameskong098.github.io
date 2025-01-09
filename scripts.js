@@ -92,7 +92,7 @@ window.addEventListener('load', () => {
     highlightCurrentSection();
   }
 
-  ScrollReveal().reveal('.about-me, .experience-item, .project-item, .education-item, .contact-info, form', {
+  ScrollReveal().reveal('.about-me, .experience-item, .project-item, .education-item, .contact-info, form, section h2', {
     origin: 'bottom',
     distance: '50px',
     duration: 1000,

@@ -158,6 +158,30 @@ section p {
   padding-left: 2%;
 }
 
+.location {
+  font-style: italic;
+  color: #555;
+}
+
+.date {
+  font-weight: bold;
+  color: #007acc;
+}
+
+.skills, .tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill, .tool {
+  background-color: #e0f7fa;
+  color: #007acc;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
 .experience, .education{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -250,7 +274,6 @@ footer p {
   opacity: 1;
 }
 
-/* Style for the "Download My Resume" button */
 .resume-button {
   display: inline-flex;
   align-items: center; 
@@ -301,8 +324,8 @@ footer p {
   overflow: hidden;
   transition: transform 0.3s, background-color 0.3s;
   text-decoration: none;
-  height: 25px; /* Set a fixed height */
-  line-height: 25px; /* Center the text vertically */
+  height: 25px; 
+  line-height: 25px; 
   margin-right: 2%;
 }
 
@@ -354,8 +377,8 @@ form textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-  font-size: 17px; /* Increase the font size for user input */
-  color: #333; /* Ensure the text color is visible */
+  font-size: 17px; 
+  color: #333; 
 }
 
 form input[type="submit"] {
@@ -465,23 +488,34 @@ form input[type="reset"]:hover::before {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-  height: 200px; /* Increase the height */
-  background-color: #fff; /* Ensure background color scales */
-  resize: vertical; /* Allow vertical resizing */
+  height: 200px; 
+  background-color: #fff; 
+  resize: vertical; 
 }
 
-form input[type="submit"]:hover::before {
-  opacity: 1;
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-size: 17px;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-form input[type="text"]::placeholder,
-form input[type="email"]::placeholder,
-form textarea::placeholder {
-  font-size: 17px; /* Adjust the font size as needed */
-  color: #666; /* Change the color of the placeholder text to be more visible */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+  border-color: #007acc;
+  box-shadow: 0 2px 5px rgba(0, 122, 204, 0.3);
+  outline: none;
 }
 
-/* Sidebar styles */
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -542,7 +576,6 @@ form textarea::placeholder {
 }
   */
 
-/* Hamburger menu styles */
 .hamburger-menu {
   display: none;
   font-size: 25px;
@@ -558,14 +591,12 @@ form textarea::placeholder {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Content styles */
 .content {
   margin-left: 318px;
   padding: 20px;
   transition: margin-left 0.3s, filter 0.3s;
 }
 
-/* Overlay effect */
 .overlay {
   position: fixed;
   top: 0;
