@@ -252,7 +252,7 @@
                   target="_blank"
                   class="social-button"
                 >
-                Live Page
+                Live Site
               </a>
               <p class="date">
                 November 2024 - December 2024 <span></span>
@@ -406,10 +406,10 @@
               <span class="material-symbols-outlined mail-icon">call</span>
             </a>
           </div>
-          <div id="success-message">
+          <div id="status-message">
             Your message has been sent!
           </div>
-          <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSf00E6H3380te4kP5_d0t4i1z1E7vFHPwo5Jb08_kc7ovgg9w/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+          <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSf00E6H3380te4kP5_d0t4i1z1E7vFHPwo5Jb08_kc7ovgg9w/formResponse" method="POST" target="hidden_iframe" onsubmit=formSubmissionHandler()>
             <input type="text" name="entry.45925323" id="full-name" required placeholder="Your Name">
             <input type="email" name="entry.1829790175" id="email" required placeholder="Your Email">
             <textarea name="entry.5649386" id="message" rows="4" cols="50" required placeholder="Enter your message"></textarea>
@@ -418,7 +418,7 @@
               <input type="reset" value="Reset">
             </div>
           </form>
-          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="formSubmissionHandler()"></iframe>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
         </section>
 
       </main>
