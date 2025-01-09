@@ -644,6 +644,7 @@ form textarea:focus {
   .sidebar {
     display: flex;
     justify-content: center;
+    left: -100%; /* Initially hide the menu on smaller screens */
   }
 
   .sidebar ul li a {
