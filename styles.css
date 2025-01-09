@@ -7,8 +7,34 @@ body {
   font-family: "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f4f8;
-  color: #333;
+}
+
+/* Color Styles */
+body {
+  background-color: #f5f5dc; 
+  color: #333; 
+}
+.about-me, .experience-item, .education-item, .project-item {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+.sidebar {
+  background-color: #ff6347; 
+}
+header, .button, #scroll-up-button, .resume-button, .social-button, footer, form input[type="submit"], form input[type="reset"] {
+  background-color: #20b2aa; 
+}
+header, .button, .resume-button, .social-button, footer, .sidebar ul li a {
+  color: #333; 
+}
+.button:hover, #scroll-up-button:hover, .resume-button:hover, .social-button:hover, form input[type="submit"]:hover, form input[type="reset"]:hover {
+  transform: scale(1.1);
+  background-color: #3cb371; 
+}
+.profile-picture img {
+  border: 3px solid #20b2aa; 
+  max-width: 200px;
+  border-radius: 50%;
 }
 
 .container {
@@ -29,8 +55,6 @@ body {
 }
 
 header {
-  background-color: #007acc;
-  color: #fff;
   padding: 25px;
 }
 
@@ -57,14 +81,12 @@ section h2 {
   font-size: 32px;
   margin-bottom: 20px;
   font-family: "Montserrat", sans-serif;
-  color: #007acc;
 }
 
 section h3 {
   font-size: 24px;
   margin-bottom: 10px;
   font-family: "Montserrat", sans-serif;
-  color: #005f99;
 }
 
 section p {
@@ -76,7 +98,6 @@ section p {
   display: inline-block;
   margin: 10px;
   padding: 10px 20px;
-  background-color: #007acc;
   color: #fff;
   border-radius: 5px;
   position: relative;
@@ -87,7 +108,6 @@ section p {
 
 .button:hover {
   transform: scale(1.1);
-  background-color: #005f99;
 }
 
 .button::before {
@@ -128,7 +148,6 @@ section p {
 }
 
 .about-me {
-  background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -144,12 +163,6 @@ section p {
 .profile-picture {
   display: flex;
   justify-content: center;
-}
-
-.profile-picture img {
-  max-width: 200px;
-  border-radius: 50%;
-  border: 3px solid #005f99;
 }
 
 .profile-description {
@@ -187,17 +200,13 @@ section p {
 }
 
 .experience-item, .education-item {
-  background-color: #fff;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .project-item {
-  background-color: #fff;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 50px; 
 }
 
@@ -234,8 +243,6 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #007acc;
-  color: #fff;
   padding: 20px;
   text-align: center;
   font-size: 14px;
@@ -262,8 +269,6 @@ footer p {
   justify-content: center; 
   margin: 10px;
   padding: 10px 20px; 
-  background-color: #007acc;
-  color: #fff;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
@@ -274,7 +279,6 @@ footer p {
 
 .resume-button:hover {
   transform: scale(1.1);
-  background-color: #005f99;
 }
 
 .resume-button::before {
@@ -299,7 +303,6 @@ footer p {
   display: inline-block;
   margin: 10px;
   padding: 10px 20px;
-  background-color: #007acc;
   color: #fff;
   border-radius: 5px;
   position: relative;
@@ -308,11 +311,6 @@ footer p {
   text-decoration: none;
   height: 25px; 
   line-height: 25px; 
-}
-
-.social-button:hover {
-  transform: scale(1.1);
-  background-color: #005f99;
 }
 
 .social-button::before {
@@ -334,19 +332,11 @@ footer p {
 
 /* Form styles */
 form {
-  background-color: #fff;
   padding: 30px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin-top: 2%;
-}
-
-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #007acc;
 }
 
 form input[type="text"],
@@ -359,7 +349,6 @@ form textarea {
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 17px; 
-  color: #333; 
 }
 
 form input[type="text"]::placeholder,
@@ -373,8 +362,6 @@ form textarea::placeholder {
 form input[type="submit"] {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007acc;
-  color: #fff;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
@@ -382,11 +369,6 @@ form input[type="submit"] {
   text-decoration: none;
   cursor: pointer;
   border: none;
-}
-
-form input[type="submit"]:hover {
-  transform: scale(1.1);
-  background-color: #005f99;
 }
 
 form input[type="submit"]::before {
@@ -396,7 +378,6 @@ form input[type="submit"]::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
   opacity: 0;
   transition: opacity 0.3s;
   pointer-events: none;
@@ -406,8 +387,6 @@ form input[type="reset"] {
   display: inline-block;
   margin: 10px;
   padding: 10px 20px;
-  background-color: #a74545; 
-  color: #fff;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
@@ -417,11 +396,6 @@ form input[type="reset"] {
   border: none;
 }
 
-form input[type="reset"]:hover {
-  transform: scale(1.1);
-  background-color: #b24c4c; 
-}
-
 form input[type="reset"]::before {
   content: "";
   position: absolute;
@@ -429,7 +403,6 @@ form input[type="reset"]::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
   opacity: 0;
   transition: opacity 0.3s;
   pointer-events: none;
@@ -513,7 +486,6 @@ form textarea:focus {
   position: fixed;
   top: 0;
   left: 0; /* Visible by default on larger screens */
-  background-color: #007acc;
   overflow-x: hidden;
   padding-top: 10px;
   transition: left 0.3s;
@@ -603,7 +575,6 @@ form textarea:focus {
   position: fixed;
   bottom: 20px;
   right: 5px;
-  background-color: #007acc;
   color: #fff;
   border: 1px solid #fff; 
   border-radius: 50%;
@@ -629,10 +600,6 @@ form textarea:focus {
 
 #scroll-up-button:active {
   transform: scale(1.2); 
-}
-
-#scroll-up-button:hover {
-  transform: scale(1.1); 
 }
 
 .content {
