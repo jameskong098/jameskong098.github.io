@@ -448,20 +448,31 @@ form input[type="reset"]:active {
 
 #status-message {
   display: none;
-  margin-top: 15px;
-  width: 630px;
-  padding: 15px; 
+  position: fixed;
+  top: 20px;
+  right: -300px; /* Start off-screen */
+  width: 300px;
+  padding: 15px;
   border-radius: 5px;
-  margin-bottom: 20px; 
-  font-size: 20px; 
+  font-size: 16px;
   font-weight: bold;
-  text-align: center; 
-  opacity: 0; /* Start with hidden */
+  text-align: center;
+  z-index: 1000;
+  transition: right 0.5s, opacity 0.5s;
 }
 
 #status-message.show {
   display: block;
-  animation: fadeIn 1s forwards, fadeOut 1s 4s forwards; /* Fade in and out */
+  right: 20px; /* Slide in to this position */
+  opacity: 1;
+  animation: fadeOut 1s 4s forwards; /* Fade out after 4 seconds */
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    right: -300px; /* Slide out to this position */
+  }
 }
 
 #message {
@@ -688,6 +699,11 @@ form input[type="reset"]:active {
   .experience, .education {
     grid-template-columns: 1fr; /* Ensure tiles take full width */
   }
+
+  #status-message {
+    width: 250px;
+  }
+  
 }
 
 /* Small Laptop Menu Layout */
