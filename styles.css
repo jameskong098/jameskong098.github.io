@@ -72,10 +72,9 @@ section p {
   line-height: 1.6;
 }
 
-
-.github-logo, .linkedin-logo {
-  width: 24px;
-  height: 24px;
+.github-logo, .linkedin-logo, .instagram-logo, .facebook-logo {
+  width: 26px;
+  height: 26px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -86,6 +85,14 @@ section p {
 
 .linkedin-logo {
   background-image: url("assets/Linkedin.png");
+}
+
+.instagram-logo {
+  background-image: url("assets/Instagram.png");
+}
+
+.facebook-logo {
+  background-image: url("assets/Facebook.png");
 }
 
 #social-buttons {
@@ -193,6 +200,7 @@ section p {
 .contact-info {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 footer {
@@ -219,7 +227,7 @@ footer p {
 }
 
 #footer-source-link a {
-  background-color: rgba(255, 255, 255, 0.726);
+  background-color: rgba(54, 54, 54, 0.726);
 }
 
 .resume-button {
@@ -508,6 +516,7 @@ form input[type="reset"]:active {
 }
 
 .sidebar ul li a .material-symbols-outlined {
+  justify-content: center;
   margin-right: 15px;
   vertical-align: middle;
 }
