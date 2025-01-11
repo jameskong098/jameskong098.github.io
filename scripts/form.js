@@ -1,6 +1,8 @@
 const maxWidth = 1180;
 
-function formSubmissionHandler() {
+function formSubmissionHandler(event) {
+  event.preventDefault();
+
   const form = document.getElementById('gform');
   const formData = new FormData(form);
   const statusMessage = document.getElementById('status-message');

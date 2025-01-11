@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&text=mail,school,contact_support, work_history, contact_page, folder_special, call, download, arrow_upward"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <script src="scripts/form.js"></script>
@@ -424,7 +427,7 @@
           <div id="status-message">
             Your message has been sent!
           </div>
-          <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSf00E6H3380te4kP5_d0t4i1z1E7vFHPwo5Jb08_kc7ovgg9w/formResponse" method="POST" target="hidden_iframe" onsubmit=formSubmissionHandler()>
+          <form name="gform" id="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSf00E6H3380te4kP5_d0t4i1z1E7vFHPwo5Jb08_kc7ovgg9w/formResponse" method="POST" target="hidden_iframe" onsubmit=formSubmissionHandler(event)>
             <input type="text" name="entry.45925323" id="full-name" required placeholder="Your Name">
             <input type="email" name="entry.1829790175" id="email" required placeholder="Your Email">
             <textarea name="entry.5649386" id="message" rows="4" cols="50" required placeholder="Enter your message"></textarea>
