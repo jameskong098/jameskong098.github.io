@@ -72,9 +72,16 @@ section p {
   line-height: 1.6;
 }
 
-.github-logo, .linkedin-logo, .instagram-logo, .facebook-logo {
+.linkedin-logo, .instagram-logo, .facebook-logo {
   width: 26px;
   height: 26px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.github-logo {
+  width: 28px;
+  height: 28px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -93,11 +100,6 @@ section p {
 
 .facebook-logo {
   background-image: url("assets/Facebook.png");
-}
-
-#social-buttons {
-  display: flex;
-  flex-direction: row;
 }
 
 .about-me {
@@ -171,7 +173,7 @@ section p {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 50px; 
+  margin-bottom: 20px; 
 }
 
 .experience-item img, .education-item img {
@@ -273,9 +275,33 @@ footer p {
   background-color: #00436d;
 }
 
+.social-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#contact .social-button {
+  width: 50px;
+  height: 50px; 
+  padding: 0; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* Common style for social buttons */
 .social-button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 10px;
   padding: 10px 20px;
   background-color: #007acc;
@@ -287,6 +313,7 @@ footer p {
   text-decoration: none;
   height: 25px; 
   line-height: 25px; 
+  white-space: nowrap;
 }
 
 .social-button:hover {
@@ -487,10 +514,6 @@ form input[type="reset"]:active {
   resize: vertical; 
 }
 
-
-
-
-
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -639,7 +662,7 @@ form input[type="reset"]:active {
   display: none;
 }
 
-/* Media Queries */
+/* General Mobile Layout */
 @media (max-width: 1180px) {
   #desktop-header {
     display: none;
@@ -659,12 +682,6 @@ form input[type="reset"]:active {
 
   section h3 {
     font-size: 18px;
-  }
-
-  #social-buttons {
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
   }
 
   .experience, .education{
@@ -690,12 +707,26 @@ form input[type="reset"]:active {
   }
 }
 
-/* Small Phone Menu Layout */
-@media (max-width: 400px) {
+@media (max-width: 500px) {
+  .contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  #contact .social-button {
+    margin: 8px;
+  }
+}
+
+/* Small Phone Layout */
+@media (max-width: 414px) {
   /* (Shorten Menu so user can see the screen) */
   .sidebar {
     width: 215px;
   }
+
   .experience, .education {
     grid-template-columns: 1fr; /* Ensure tiles take full width */
   }
@@ -703,17 +734,32 @@ form input[type="reset"]:active {
   #status-message {
     width: 250px;
   }
-  
+
+  #contact .social-button {
+    margin: 6px;
+  }
 }
 
-/* Small Laptop Menu Layout */
+@media (max-width: 390px) {
+  #contact .social-button {
+    margin: 4px;
+  }
+}
+
+@media (max-width: 360px) {
+  .social-button {
+    margin: 2px;
+  }
+}
+
+/* Small Laptop Layout */
 @media (max-height: 800px) {
   .sidebar ul li a {
     margin-bottom: 15%;
   }
 }
 
-/* Phone Landscape Menu Layout */
+/* Phone Landscape Layout */
 @media (max-height: 400px) {
   .sidebar {
     width: 215px;
