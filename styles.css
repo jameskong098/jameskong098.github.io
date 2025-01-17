@@ -204,14 +204,14 @@ section p {
   height: auto;
 }
 
-#trojan-horse-game-images {
+#project-images {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-#trojan-horse-game-images img {
+#project-images img {
   max-width: 100%;
   padding-bottom: 2%;
 }
