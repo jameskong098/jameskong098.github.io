@@ -566,26 +566,20 @@ form input[type="reset"]:active {
   margin-bottom: 25%;
 }
 
-.sidebar ul li a .material-symbols-outlined {
+.sidebar ul li a svg {
   justify-content: center;
   margin-right: 15px;
   vertical-align: middle;
 }
 
-.education-icon {
-  font-size: 30px; 
-}
-
-.contact-icon {
-  font-size: 30px; 
-}
-
-.mail-icon {
-  font-size: 30px; 
+.education-icon, .contact-icon, .mail-icon {
+  width: 30px;
+  height: 30px;
 }
 
 .download-icon {
-  font-size: 25px; 
+  width: 25px;
+  height: 25px;
   vertical-align: middle;
   margin-right: 4px;
 }
