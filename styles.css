@@ -664,6 +664,57 @@ form input[type="reset"]:active {
   display: none;
 }
 
+.award-banner {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, rgba(232,73,254,1), rgba(82,86,189,1));
+  border-radius: 8px;
+  padding: 15px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid #007aff;
+}
+
+.apple-award-logo {
+  height: 60px; 
+  width: auto; 
+  margin-right: 15px;
+  object-fit: contain; 
+}
+
+.award-text {
+  color: white;
+}
+
+.award-text h4 {
+  margin: 0;
+  font-size: 18px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.award-text p {
+  margin: 5px 0 0;
+  font-size: 26px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  text-shadow: none; 
+  color: gold;
+  animation: textPulse 3s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+  0% {
+    text-shadow: 0 0 5px rgba(179, 255, 179, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(0, 204, 102, 0.8), 0 0 20px rgba(179, 255, 179, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(179, 255, 179, 0.1);
+  }
+}
+
 /* General Mobile Layout */
 @media (max-width: 1180px) {
   #desktop-header {
@@ -743,6 +794,10 @@ form input[type="reset"]:active {
 
   #contact .social-button {
     margin: 6px;
+  }
+
+  .apple-award-logo {
+    display: none;
   }
 }
 
