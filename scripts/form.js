@@ -6,8 +6,27 @@ function formSubmissionHandler(event) {
   const form = document.getElementById('gform');
   const formData = new FormData(form);
   const statusMessage = document.getElementById('status-message');
+  const honeypotField = document.getElementById('website');
 
   statusMessage.classList.remove('show');
+
+  // Check if honeypot field is filled (bot detected)
+  if (honeypotField && honeypotField.value) {
+    // Silently reject the form without notifying the bot
+    statusMessage.classList.add('show');
+    statusMessage.style.color = '#28a745'; 
+    statusMessage.style.backgroundColor = '#d4edda'; 
+    statusMessage.style.border = '1px solid #c3e6cb'; 
+    statusMessage.textContent = 'Your message has been sent!';
+    form.reset();
+    setTimeout(() => {
+      statusMessage.classList.remove('show');
+    }, 5000);
+    return false;
+  }
+
+  // Remove the honeypot field from the form data before submitting
+  formData.delete('website');
 
   fetch(form.action, {
     method: 'POST',
