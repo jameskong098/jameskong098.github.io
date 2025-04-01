@@ -715,6 +715,18 @@ form input[type="reset"]:active {
   }
 }
 
+/* Honeypot Field */
+/* This field is hidden from users but visible to bots */
+.important-field {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    z-index: -1;
+}
+
 /* General Mobile Layout */
 @media (max-width: 1180px) {
   #desktop-header {
